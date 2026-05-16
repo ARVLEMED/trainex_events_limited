@@ -1,10 +1,9 @@
 // App.tsx
 import { 
   Calendar, MapPin, Users, Target, Globe, Award, Briefcase, 
-  Handshake, Mic, Layout, CheckCircle, ArrowRight, Mail, 
+  Handshake, CheckCircle, Mail, 
   Phone, Linkedin, Twitter, Facebook, ChevronRight, 
-  Sparkles, TrendingUp, Shield, Clock, Star, Building2,
-  FileText, Megaphone, Network, Trophy, Eye, Rocket,
+  Sparkles, TrendingUp, Shield, Star, Building2, Megaphone, Network, Trophy, Eye, Rocket,
   BarChart3, Gem, Crown, Infinity
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
