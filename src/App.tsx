@@ -546,7 +546,7 @@ const App = () => {
           </div>
           
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>&copy; {new Date().getFullYear()} Trainex Events Limited. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Arvlemed. All rights reserved.</p>
             <p className="text-sm mt-1">Premium Strategic Events Management</p>
           </div>
         </div>
