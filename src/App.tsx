@@ -1,10 +1,12 @@
 // App.tsx
+// App.tsx - Fix the import section (line 1-15)
 import { 
   Calendar, MapPin, Users, Target, Globe, Award, Briefcase, 
   Handshake, CheckCircle, Mail, 
-  Phone, Linkedin, Twitter, Facebook, ChevronRight, 
-  Sparkles, TrendingUp, Shield, Star, Building2, Megaphone, Network, Trophy, Eye, Rocket,
-  BarChart3, Gem, Crown, Infinity
+  Phone, ChevronRight, 
+  Sparkles, TrendingUp, Shield, Star, Building, 
+  Trophy, Eye, Rocket, BarChart3, Gem, Crown,
+  Link, Share2, MessageCircle
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -44,7 +46,6 @@ const App = () => {
 
       {/* Hero Section - Master Level */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B1C3F] via-[#1A2B5E] to-[#0F766E]"></div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full blur-3xl animate-pulse"></div>
@@ -82,7 +83,6 @@ const App = () => {
           </div>
         </div>
         
-        {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
             <div className="w-1 h-2 bg-white/50 rounded-full mt-2 animate-pulse"></div>
@@ -200,7 +200,7 @@ const App = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-blue-50 rounded-full px-4 py-2 mb-4">
-              <Megaphone className="w-4 h-4 text-blue-600" />
+              <Star className="w-4 h-4 text-blue-600" />
               <span className="text-blue-600 text-sm font-semibold">Our Expertise</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">World-Class<span className="text-blue-600"> Conference Delivery</span></h2>
@@ -264,7 +264,7 @@ const App = () => {
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-8 text-white shadow-2xl">
                 <div className="text-center">
-                  <Building2 className="w-20 h-20 mx-auto mb-6 opacity-80" />
+                  <Building className="w-20 h-20 mx-auto mb-6 opacity-80" />
                   <p className="text-xl font-semibold mb-2">Trusted by:</p>
                   <p className="text-2xl font-bold">Embassies, High Commissions</p>
                   <p className="text-lg opacity-90">and International Organizations</p>
@@ -292,7 +292,7 @@ const App = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-3xl p-10 shadow-lg hover:shadow-xl transition border border-gray-100">
               <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                <Building2 className="w-7 h-7 text-white" />
+                <Building className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Connecting Corporate Leaders</h3>
               <p className="text-blue-600 font-semibold mb-3 text-lg">Corporate & Business Forums</p>
@@ -327,7 +327,7 @@ const App = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-blue-50 rounded-full px-4 py-2 mb-4">
-              <Infinity className="w-4 h-4 text-blue-600" />
+              <Target className="w-4 h-4 text-blue-600" />
               <span className="text-blue-600 text-sm font-semibold">Our Methodology</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">A Seamless<span className="text-blue-600"> 5-Step Process</span></h2>
@@ -370,7 +370,7 @@ const App = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
-              { name: "Embassies & High Commissions", icon: <Building2 />, color: "from-blue-500 to-blue-600" },
+              { name: "Embassies & High Commissions", icon: <Building />, color: "from-blue-500 to-blue-600" },
               { name: "Investors & Business Associations", icon: <TrendingUp />, color: "from-emerald-500 to-emerald-600" },
               { name: "Government Ministries", icon: <Shield />, color: "from-purple-500 to-purple-600" },
               { name: "International Institutions", icon: <Globe />, color: "from-orange-500 to-orange-600" },
@@ -400,7 +400,7 @@ const App = () => {
               { title: "Proven Experience", desc: "Track record in international and regional events", icon: <Trophy />, color: "from-yellow-500 to-orange-500" },
               { title: "Diplomatic Expertise", desc: "Deep understanding of diplomatic & corporate environments", icon: <Shield />, color: "from-blue-500 to-indigo-500" },
               { title: "Professional Excellence", desc: "Reliable, detail-oriented execution", icon: <Award />, color: "from-purple-500 to-pink-500" },
-              { title: "Strong Networks", desc: "Extensive stakeholder and partner relationships", icon: <Network />, color: "from-green-500 to-emerald-500" },
+              { title: "Strong Networks", desc: "Extensive stakeholder and partner relationships", icon: <Users />, color: "from-green-500 to-emerald-500" },
               { title: "Customized Solutions", desc: "Tailor-made approaches aligned with your objectives", icon: <Gem />, color: "from-red-500 to-orange-500" },
               { title: "Strategic Location", desc: "Based in Gigiri, Village Market, proximity to embassies and UN offices", icon: <MapPin />, color: "from-teal-500 to-cyan-500" }
             ].map((adv, i) => (
@@ -502,11 +502,19 @@ const App = () => {
                 Connecting Institutions, Markets, and Global Opportunities through world-class events and strategic engagements.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><Linkedin className="w-5 h-5" /></a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><Twitter className="w-5 h-5" /></a>
-                <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><Facebook className="w-5 h-5" /></a>
-              </div>
-            </div>
+        <div className="flex gap-4">
+  <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+    <Link className="w-5 h-5" />
+  </a>
+  <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+    <Share2 className="w-5 h-5" />
+  </a>
+  <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+    <MessageCircle className="w-5 h-5" />
+  </a>
+</div>
+</div>
+    </div>
             
             <div>
               <h4 className="font-bold text-lg mb-4">Quick Links</h4>
